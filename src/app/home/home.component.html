@@ -1,0 +1,8 @@
+<div class="mt-5 text-center">
+	<h1 class="text-uppercase mb-5">Home Page</h1>
+	<img *ngIf="!session" class="mx-5" src="/assets/img/dataviz.jpg" alt="Home page" />
+
+	<ng-container *ngIf="session">
+		My session: {{ session }}
+	</ng-container>
+</div>
