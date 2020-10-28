@@ -2,7 +2,8 @@ version: '3'
 services:
   affluence-front:
     build: .
-    command: "npm run serve:ssr"
+    command: "npm run dev"
+    # command: "npm run serve:ssr"
     ports:
       - 4000:4000
       - 4200:4200

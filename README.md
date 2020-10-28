@@ -56,13 +56,25 @@ Use [bootstrap](https://getbootstrap.com/) and [ngx-bootstrap](https://valor-sof
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
-## Development server
-
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Build
+## Development server static
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+Run `npm run dev` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Development server SSR
+
+Run `npm run dev:srr` for a dev server SSR in watch mode. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Run `npm run build:ssr` to build the project. The build artifacts will be stored in the `dist/browser` and `dist/server` directory. Use the `--prod` flag for a production build.
+
+Run `npm run serve:ssr` to run a simple nodejs SSR server returning your app.
+
+## Using docker => Build and run your app with Compose
+
+Run `docker-compose build` to build your app.
+
+Run `docker-compose up` to run your app.
 
 ## Running unit tests
 
