@@ -5,14 +5,11 @@
     "ng": "ng",
     "dev": "ng serve",
     "build": "ng build",
-    "test": "ng test",
     "prettier": "prettier --check 'src/**/*.ts'",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "dev:ssr": "ng run affluences-display:serve-ssr",
     "serve:ssr": "node dist/affluences-display/server/main.js",
     "build:ssr": "ng build --prod && ng run affluences-display:server:production",
-    "prerender": "ng run affluences-display:prerender"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "6.0.1",
+    "cypress": "^6.5.0",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "2.22.1",
@@ -63,15 +61,7 @@
     "eslint-plugin-prefer-arrow": "1.2.2",
     "eslint-plugin-prettier": "3.1.4",
     "husky": "5.1.0",
-    "jasmine-core": "3.6.0",
-    "jasmine-spec-reporter": "6.0.0",
-    "karma": "6.1.1",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-coverage-istanbul-reporter": "3.0.3",
-    "karma-jasmine": "4.0.1",
-    "karma-jasmine-html-reporter": "1.5.4",
     "prettier": "^2.2.1",
-    "protractor": "7.0.0",
     "ts-node": "9.1.1",
     "typescript": "4.0.7"
   }

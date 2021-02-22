@@ -73,10 +73,6 @@ Run `docker-compose build` to build your app.
 
 Run `docker-compose up` to run your app.
 
-## Running unit tests
-
-Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
 ## Running end-to-end tests
 
-Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
