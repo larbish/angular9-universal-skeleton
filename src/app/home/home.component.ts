@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // Subcribe to session change
-    this.sessionService.session$.subscribe((s) => this.onProfileChange(s));
+    this.sessionService.session$.subscribe(s => this.onProfileChange(s));
   }
 
   private onProfileChange(session: Session): void {

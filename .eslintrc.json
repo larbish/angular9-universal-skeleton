@@ -8,10 +8,13 @@
       "files": [
         "*.ts"
       ],
+      "plugins": [
+        "@typescript-eslint",
+        "prettier"
+      ],
       "parserOptions": {
         "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
+          "tsconfig.json"
         ],
         "createDefaultProgram": true
       },
@@ -19,12 +22,12 @@
         "plugin:@angular-eslint/ng-cli-compat",
         "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:@angular-eslint/recommended",
-        "airbnb-typescript/base",
+        "prettier",
         "plugin:prettier/recommended"
       ],
       "rules": {
         "import/prefer-default-export": "off",
+        "prefer-arrow/prefer-arrow-functions": "off",
         "@typescript-eslint/array-type": [
           "error",
           {
@@ -42,10 +45,6 @@
         "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
         "@typescript-eslint/triple-slash-reference": "error",
         "@typescript-eslint/type-annotation-spacing": "off",
-        "arrow-parens": [
-          "error",
-          "always"
-        ],
         "brace-style": [
           "off",
           "off"
