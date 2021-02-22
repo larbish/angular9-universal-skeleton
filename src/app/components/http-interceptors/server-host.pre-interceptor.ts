@@ -5,15 +5,14 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class ServerHostPreInterceptor implements HttpInterceptor {
-	private conf: object;
+  private readonly serverHost: string;
 
-	constructor() {
-		this.conf = environment || {};
-	}
+  constructor() {
+    this.serverHost = environment?.api?.serverHost || '';
+  }
 
-	intercept(req: HttpRequest<object>, next: HttpHandler): Observable<HttpEvent<object>> {
-		const serverHost = this.conf['api']['serverHost'];
-
-		return next.handle(req.clone({ url: serverHost + req.url }));
-	}
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    return next.handle(req.clone({ url: this.serverHost + req.url }));
+  }
 }

@@ -5,13 +5,13 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class HttpExampleService {
-	constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-	getFromApi(body: object): Observable<string> {
-		return this.http.get('/my-api', body).pipe(
-			map((res: string) => {
-				return res;
-			}),
-		);
-	}
+  getFromApi(body: object): Observable<string> {
+    return this.http.get('/my-api', body).pipe(
+      map((res: string) => {
+        return res;
+      }),
+    );
+  }
 }

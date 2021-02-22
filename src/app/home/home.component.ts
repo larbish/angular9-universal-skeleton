@@ -3,28 +3,29 @@ import { Session } from 'src/models/session.model';
 import { SessionService } from '../components/session/session.service';
 
 @Component({
-	selector: 'app-home',
-	templateUrl: './home.component.html',
-	styleUrls: ['./home.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-	public session: Session;
-	public loading: boolean;
+  public session: Session;
 
-	constructor(private sessionService: SessionService) {}
+  public loading: boolean;
 
-	ngOnInit(): void {
-		// Subcribe to session change
-		this.sessionService.session$.subscribe((s) => this.onProfileChange(s));
-	}
+  constructor(private sessionService: SessionService) {}
 
-	private onProfileChange(session: Session): void {
-		// If no session or no token, return
-		if (!session || !session.token) {
-			this.session = null;
-			return;
-		}
+  ngOnInit(): void {
+    // Subcribe to session change
+    this.sessionService.session$.subscribe((s) => this.onProfileChange(s));
+  }
 
-		this.session = session;
-	}
+  private onProfileChange(session: Session): void {
+    // If no session or no token, return
+    if (!session || !session.token) {
+      this.session = null;
+      return;
+    }
+
+    this.session = session;
+  }
 }
