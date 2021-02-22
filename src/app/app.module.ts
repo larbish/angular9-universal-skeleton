@@ -9,10 +9,15 @@ import { ServerHostPreInterceptor } from './components/http-interceptors/server-
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
-  // Http Pre Interceptor used to set server host at each http call
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ServerHostPreInterceptor, multi: true }, DatePipe],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, HomeComponent],
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+    ],
+    // Http Pre Interceptor used to set server host at each http call
+    providers: [{ provide: HTTP_INTERCEPTORS, useClass: ServerHostPreInterceptor, multi: true }, DatePipe],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
