@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SessionStorageStoreService } from '../components/data-store/session-storage-store.service';
 import { SessionService } from '../components/session/session.service';
@@ -9,7 +9,7 @@ describe('HeaderComponent', () => {
 	let component: HeaderComponent;
 	let fixture: ComponentFixture<HeaderComponent>;
 
-	beforeEach(async(() => {
+	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
 			imports: [HttpClientModule, RouterTestingModule],
 			declarations: [HeaderComponent],
