@@ -19,27 +19,24 @@ In project context:
 
 I am still using TSlint even if i know it has been decrecated. Ng cli still use it too.
 
-
 ## Code formatter
 
-Prettier (.prettierrc) | Use Prettier plugin on vscode
+An .editorconfig file is provided in this repo in order to match lint rules and keep coding consitency between developers
 
-## IDE recommended settings for vscode
+Prettier (.prettierrc) is used to help developers formating their code
 
-```
+# Pretttier on intellij
+
+https://prettier.io/docs/en/webstorm.html
+
+# Pretttier on vscode
+
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```json
 {
-  "window.zoomLevel": 0,
-  "editor.foldingStrategy": "indentation",
-  "editor.insertSpaces": false,
-  "editor.detectIndentation": false,
-  "editor.tabSize": 4,
-  "breadcrumbs.enabled": true,
-  "terminal.integrated.rendererType": "dom",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.formatOnSave": true
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
-
 ```
 
 ## Git hooks
