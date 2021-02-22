@@ -1,16 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { SessionService } from './components/session/session.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  constructor(private sessionService: SessionService) {}
-
-  ngOnInit(): void {
-    // Load session configuration
-    this.sessionService.load();
-  }
-}
+export class AppComponent {}
