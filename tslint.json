@@ -1,5 +1,5 @@
 {
-	"extends": ["tslint-config-airbnb", "tslint-eslint-rules", "tslint-config-prettier"],
+	"extends": ["tslint-config-airbnb", "tslint-config-prettier"],
 	"rules": {
 		"arrow-parens": true,
 		"semicolon": [true, "always"],
