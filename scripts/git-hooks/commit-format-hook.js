@@ -4,7 +4,7 @@ const fs = require('fs');
 const util = require('util');
 
 const MAX_LENGTH = 75;
-const PATTERN = /^[a-z-]{2,12}: [A-Z][a-zA-Z0-9-_#&' \.]+ [A-Z]{3}-[0-9]+$/;
+const PATTERN = /^[a-z-]{2,12}: [A-Z][a-zA-Z0-9-_#&' \.]/;
 const VERSION_PATTERN = /^([0-9]+\.)+[0-9]+$/;
 
 function validateMsg(msg) {

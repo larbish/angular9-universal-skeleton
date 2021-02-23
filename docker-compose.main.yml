@@ -1,0 +1,9 @@
+version: '3'
+services:
+  affluence-display:
+    build:
+        context: .
+        args:
+            target: 'staging'
+    ports:
+      - 4201:80

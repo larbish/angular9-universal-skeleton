@@ -8,7 +8,7 @@ export class ServerHostPreInterceptor implements HttpInterceptor {
     private readonly serverHost: string;
 
     constructor() {
-        this.serverHost = environment?.api?.serverHost || '';
+        this.serverHost = (environment && environment.api && environment.api.serverHost) || '';
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

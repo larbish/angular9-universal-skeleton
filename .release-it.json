@@ -1,0 +1,20 @@
+{
+    "npm": {
+        "publish": false
+    },
+    "github": {
+        "release": false
+    },
+    "git": {
+        "requireCleanWorkingDir": false,
+        "commitMessage": "release: V${version}",
+        "commit": true,
+        "commitArgs": ["--no-verify"],
+        "tag": true,
+        "tagAnnotation": "release: V${version}",
+        "push": true,
+        "pushRepo": null,
+        "changelog": "npm run build:changelog && git add .",
+        "afterReleaseCommand": "npm run post:release"
+    }
+}
