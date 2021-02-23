@@ -23,13 +23,15 @@ Eslint rules are editable in .eslintrc
 
 An .editorconfig file is provided in this repo in order to match lint rules and keep coding consitency between developers
 
+### Prettier
+
 Prettier (.prettierrc) is used to help developers formating their code
 
-# Pretttier on intellij
+#### Pretttier on intellij
 
 https://prettier.io/docs/en/webstorm.html
 
-# Pretttier on vscode
+#### Pretttier on vscode
 
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
@@ -70,13 +72,13 @@ Run `npm run serve:ssr` to run a simple nodejs SSR server returning your app.
 
 ## Using docker => Build and run your app with Compose
 
-### build a dev image
+### Build a dev image
 
 Run `docker-compose build` to build your app.
 
 Run `docker-compose up` to run your app.
 
-### build a staging / production image
+### Build a staging / production image
 
 Run `docker-compose -f docker-compose.main.yml build` to build your app.
 
